@@ -1,0 +1,144 @@
+{
+  "theme_and_archetype": {
+    "domain": "Social Media Platform (E2E Encrypted)",
+    "brand_name": "T.P (Totally Private)",
+    "theme": "Dark Theme Default (with Light Mode toggle)",
+    "archetype": "Archetype 4 (Swiss & High-Contrast)",
+    "mood_and_tone": "Authority, Clarity, Truth, Premium Security. The aesthetic should feel like an exclusive, highly secure digital control room rather than a noisy public square."
+  },
+  "typography": {
+    "rules": "Strict adherence to anti-default typography. Do NOT use Inter, Roboto, or standard system sans for headings. Emphasize contrast and crispness.",
+    "fonts": {
+      "heading": "Outfit",
+      "body": "IBM Plex Sans",
+      "mono": "JetBrains Mono"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl tracking-tight font-light",
+      "h2": "text-2xl sm:text-3xl tracking-tight font-medium",
+      "h3": "text-xl font-medium",
+      "body": "text-base leading-relaxed text-foreground/80",
+      "overline": "text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground"
+    }
+  },
+  "colors": {
+    "philosophy": "Monochrome foundation with high-visibility surgical accents. No generic gradients.",
+    "dark_mode": {
+      "background": "#0A0A0A",
+      "surface": "#121212",
+      "surface_elevated": "#1A1A1A",
+      "primary": "#0055FF",
+      "primary_foreground": "#FFFFFF",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "rgba(255, 255, 255, 0.6)",
+      "border": "rgba(255, 255, 255, 0.1)",
+      "ai_accent": "#002FA7"
+    },
+    "light_mode": {
+      "background": "#FFFFFF",
+      "surface": "#F7F7F7",
+      "surface_elevated": "#EBEBEB",
+      "primary": "#002FA7",
+      "primary_foreground": "#FFFFFF",
+      "text_primary": "#000000",
+      "text_secondary": "rgba(0, 0, 0, 0.6)",
+      "border": "rgba(0, 0, 0, 0.1)",
+      "ai_accent": "#0055FF"
+    }
+  },
+  "layout_and_spacing": {
+    "grid_system": "The Control Room Grid. 12-column layout on desktop.",
+    "structure": {
+      "left_sidebar": "col-span-3 h-screen sticky top-0 border-r border-border p-6 flex flex-col justify-between",
+      "middle_feed": "col-span-6 min-h-screen border-r border-border pb-20",
+      "right_sidebar": "col-span-3 h-screen sticky top-0 p-6"
+    },
+    "spacing_rules": "Generous internal padding (p-6, p-8) for right sidebar widgets and individual posts. Gap-6 between feed items.",
+    "surfaces": {
+      "header_glass": "backdrop-blur-xl bg-background/70 border-b border-border z-50 sticky top-0",
+      "post_container": "border-b border-border p-6 hover:bg-surface/50 transition-colors cursor-pointer"
+    }
+  },
+  "components": {
+    "buttons": "Sharp edges (rounded-sm or rounded-none). Primary CTA is vibrant blue with crisp white text. Hover states explicitly define background and text color.",
+    "stories_row": "Horizontal scrollable flex container (p-4 gap-4 border-b border-border). Story rings should use a moving 'Tracing Beam' gradient or a solid primary border to indicate unread status. Avatars inside must be rounded-full with 2px padding between image and ring.",
+    "photo_posts": "Images max-h-[70vh] w-full object-cover rounded-md border border-border mt-3.",
+    "chat_ui": "ChatGPT aesthetic for AI. Sent messages use #1E1E1E with subtle glow, AI messages use transparent background with a left accent border (#0055FF) and #121212 background.",
+    "inputs_and_forms": "Use Shadcn customized components. Inputs should have transparent backgrounds with solid bottom borders, or subtle 1px complete borders. Focus state must ring with Primary blue.",
+    "icons": "Use @phosphor-icons/react (Duotone or Regular) for a distinct, high-end technical look instead of standard lucide."
+  },
+  "media": {
+    "instructions": "All image URLs provided MUST be used. Do not use placeholder services.",
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1639834561750-1f0f02134d63?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdCUyMHBlcnNvbiUyMGRhcmslMjBtb29keXxlbnwwfHx8fDE3NzU0ODM3NDV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "user_avatar",
+        "description": "User profile avatar"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1739624079957-917135a9c545?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxwb3J0cmFpdCUyMHBlcnNvbiUyMGRhcmslMjBtb29keXxlbnwwfHx8fDE3NzU0ODM3NDV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "suggestion_avatar",
+        "description": "Suggested profile 1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1551678663-b18770239cf0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHxwb3J0cmFpdCUyMHBlcnNvbiUyMGRhcmslMjBtb29keXxlbnwwfHx8fDE3NzU0ODM3NDV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "suggestion_avatar",
+        "description": "Suggested profile 2"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1611111082664-534b2cd71d6f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHBlcnNvbiUyMGRhcmslMjBtb29keXxlbnwwfHx8fDE3NzU0ODM3NDV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "story_avatar",
+        "description": "Story row avatar"
+      }
+    ],
+    "feed_posts": [
+      {
+        "url": "https://images.unsplash.com/photo-1625239881160-cf0a59a28578?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHx1cmJhbiUyMG1pbmltYWxpc3QlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzc1NDgzNzQ1fDA&ixlib=rb-4.1.0&q=85",
+        "category": "post_image",
+        "description": "Feed post image 1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1608400024869-d9f3fa50f98e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMG1pbmltYWxpc3QlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzc1NDgzNzQ1fDA&ixlib=rb-4.1.0&q=85",
+        "category": "post_image",
+        "description": "Feed post image 2"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1625319267695-ffc14016b3fb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHx1cmJhbiUyMG1pbmltYWxpc3QlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzc1NDgzNzQ1fDA&ixlib=rb-4.1.0&q=85",
+        "category": "post_image",
+        "description": "Feed post image 3"
+      }
+    ],
+    "story_backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1607429126980-5e59cecb6a12?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGRhcmslMjB0ZXh0dXJlfGVufDB8fHx8MTc3NTQ4Mzc0NXww&ixlib=rb-4.1.0&q=85",
+        "category": "story_content",
+        "description": "Story content 1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1713029932378-ebda8662d0b1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGRhcmslMjB0ZXh0dXJlfGVufDB8fHx8MTc3NTQ4Mzc0NXww&ixlib=rb-4.1.0&q=85",
+        "category": "story_content",
+        "description": "Story content 2"
+      }
+    ],
+    "ai_avatar": [
+      {
+        "url": "https://images.unsplash.com/photo-1774360502057-a934d7d0ce60?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjAzZHxlbnwwfHx8fDE3NzU0ODM3NTV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "ai_system_avatar",
+        "description": "AI Assistant Avatar"
+      }
+    ]
+  },
+  "interactions_and_accessibility": {
+    "hover_states": "All buttons MUST have explicit text color on hover (e.g. hover:bg-white hover:text-black).",
+    "focus_states": "Interactive elements must show ring-2 ring-primary focus indicator.",
+    "testing": "All interactive and key informational elements MUST include a data-testid attribute formatted as kebab-case, role-based."
+  },
+  "instructions_to_main_agent": [
+    "Override default tailwind configurations in tailwind.config.js to match the provided Hex color palette. Map background to #0A0A0A in dark mode.",
+    "Build the core layout using CSS Grid with a 12-column template for desktop. Strictly follow the col-span definitions (3 - 6 - 3).",
+    "Install and use @phosphor-icons/react or lucide-react, but prefer Phosphor for the technical UI feel.",
+    "Implement a theme toggle that switches between the exact hex values provided.",
+    "For the AI Chat screen, use a distinct UI pattern mapping to the 'chat_ui' specs: messages should not look like generic chat bubbles, but rather layered elevations (#1E1E1E) with subtle typography hierarchy.",
+    "Images for Avatars, Posts, and Stories MUST be populated from the exact URLs in the media section. Do not use placehold.it or standard gray boxes."
+  ]
+}
