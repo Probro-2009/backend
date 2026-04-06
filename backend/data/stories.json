@@ -1,0 +1,24 @@
+[
+  {
+    "id": "b0e714d1-e9f3-4dde-ba9c-d5776d54f202",
+    "user_id": "68cd3e8d-98fc-4422-b879-f1ef90232eca",
+    "username": "alice",
+    "display_name": "Alice Chen",
+    "avatar_url": "https://images.unsplash.com/photo-1611111082664-534b2cd71d6f?w=150&h=150&fit=crop&crop=face",
+    "image": "https://images.unsplash.com/photo-1607429126980-5e59cecb6a12?w=600&q=80",
+    "viewers": [],
+    "created_at": "2026-04-06T15:53:08.655350+00:00",
+    "expires_at": "2026-04-07T15:53:08.655352+00:00"
+  },
+  {
+    "id": "662c2940-caf8-4169-afe5-21bb30e5b928",
+    "user_id": "994ae822-9118-4b5c-b7b7-c85b784381dc",
+    "username": "marcus",
+    "display_name": "Marcus Webb",
+    "avatar_url": "https://images.unsplash.com/photo-1639834561750-1f0f02134d63?w=150&h=150&fit=crop&crop=face",
+    "image": "https://images.unsplash.com/photo-1713029932378-ebda8662d0b1?w=600&q=80",
+    "viewers": [],
+    "created_at": "2026-04-06T15:53:08.655359+00:00",
+    "expires_at": "2026-04-07T15:53:08.655360+00:00"
+  }
+]

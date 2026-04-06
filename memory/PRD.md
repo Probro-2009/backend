@@ -9,7 +9,7 @@ Build an end-to-end encrypted social media platform called "T.P" (Totally Privat
 - **Auth**: JWT Bearer tokens with bcrypt password hashing
 - **AI**: OpenAI GPT-4o via Emergent LLM key (emergentintegrations library)
 - **E2E Encryption**: Web Crypto API (AES-GCM) for DM encryption
-- **Database**: MongoDB with motor async driver
+- **Database**: JSON file-based storage (no MongoDB needed)
 
 ## User Personas
 1. **Privacy-conscious users** - Want encrypted messaging and private social sharing

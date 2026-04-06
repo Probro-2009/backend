@@ -1,0 +1,55 @@
+[
+  {
+    "id": "dfb2f254-16ed-4971-bc79-eb7d5f499802",
+    "user_id": "68cd3e8d-98fc-4422-b879-f1ef90232eca",
+    "username": "alice",
+    "display_name": "Alice Chen",
+    "avatar_url": "https://images.unsplash.com/photo-1611111082664-534b2cd71d6f?w=150&h=150&fit=crop&crop=face",
+    "content": "Privacy is not about having something to hide. It's about having something to protect.",
+    "image": null,
+    "likes": [
+      "994ae822-9118-4b5c-b7b7-c85b784381dc"
+    ],
+    "comments": [],
+    "created_at": "2026-04-06T10:53:08.655213+00:00"
+  },
+  {
+    "id": "b5e5ec55-8383-4cde-8f9b-9dfdd265576f",
+    "user_id": "994ae822-9118-4b5c-b7b7-c85b784381dc",
+    "username": "marcus",
+    "display_name": "Marcus Webb",
+    "avatar_url": "https://images.unsplash.com/photo-1639834561750-1f0f02134d63?w=150&h=150&fit=crop&crop=face",
+    "content": "Light finds its way through every structure. New series dropping soon.",
+    "image": "https://images.unsplash.com/photo-1625239881160-cf0a59a28578?w=800&q=80",
+    "likes": [
+      "68cd3e8d-98fc-4422-b879-f1ef90232eca",
+      "69497b82-2f5c-40ba-927f-37c8c78f5a6f"
+    ],
+    "comments": [
+      {
+        "id": "47055af7-e6c5-4756-b26d-bfbb48c0633f",
+        "user_id": "68cd3e8d-98fc-4422-b879-f1ef90232eca",
+        "username": "alice",
+        "display_name": "Alice Chen",
+        "avatar_url": "https://images.unsplash.com/photo-1611111082664-534b2cd71d6f?w=150&h=150&fit=crop&crop=face",
+        "content": "Stunning work!",
+        "created_at": "2026-04-06T13:53:08.655231+00:00"
+      }
+    ],
+    "created_at": "2026-04-06T12:53:08.655235+00:00"
+  },
+  {
+    "id": "5c1d20cf-7106-45b4-b973-0f43ea34d2e8",
+    "user_id": "69497b82-2f5c-40ba-927f-37c8c78f5a6f",
+    "username": "nova",
+    "display_name": "Nova Reyes",
+    "avatar_url": "https://images.unsplash.com/photo-1551678663-b18770239cf0?w=150&h=150&fit=crop&crop=face",
+    "content": "The future of social media is encrypted. Welcome to the revolution.",
+    "image": "https://images.unsplash.com/photo-1608400024869-d9f3fa50f98e?w=800&q=80",
+    "likes": [
+      "68cd3e8d-98fc-4422-b879-f1ef90232eca"
+    ],
+    "comments": [],
+    "created_at": "2026-04-06T14:53:08.655241+00:00"
+  }
+]

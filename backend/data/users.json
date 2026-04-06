@@ -1,0 +1,48 @@
+[
+  {
+    "id": "68cd3e8d-98fc-4422-b879-f1ef90232eca",
+    "username": "alice",
+    "email": "alice@tp.com",
+    "password_hash": "$2b$12$4E.sWD4ZPc8rR/Es1Okyn.vYq8dlmRW4VDheswxXQaekZH4dPw0DC",
+    "display_name": "Alice Chen",
+    "bio": "Privacy advocate. Digital rights activist.",
+    "avatar_url": "https://images.unsplash.com/photo-1611111082664-534b2cd71d6f?w=150&h=150&fit=crop&crop=face",
+    "followers": [],
+    "following": [
+      "994ae822-9118-4b5c-b7b7-c85b784381dc",
+      "69497b82-2f5c-40ba-927f-37c8c78f5a6f"
+    ],
+    "created_at": "2026-04-06T15:53:08.208291+00:00"
+  },
+  {
+    "id": "994ae822-9118-4b5c-b7b7-c85b784381dc",
+    "username": "marcus",
+    "email": "marcus@tp.com",
+    "password_hash": "$2b$12$tOEPQ0Jfr2Zs2rSpCLNdM.aH8VIsp52rWcDwMlWPFSRC02XWT64C6",
+    "display_name": "Marcus Webb",
+    "bio": "Photographer. Exploring light and shadow.",
+    "avatar_url": "https://images.unsplash.com/photo-1639834561750-1f0f02134d63?w=150&h=150&fit=crop&crop=face",
+    "followers": [
+      "68cd3e8d-98fc-4422-b879-f1ef90232eca"
+    ],
+    "following": [
+      "69497b82-2f5c-40ba-927f-37c8c78f5a6f"
+    ],
+    "created_at": "2026-04-06T15:53:08.432223+00:00"
+  },
+  {
+    "id": "69497b82-2f5c-40ba-927f-37c8c78f5a6f",
+    "username": "nova",
+    "email": "nova@tp.com",
+    "password_hash": "$2b$12$rTk491Rua4LvUwCW0B1MhO9WV1qN2fOk22Da9iPwYzbXmTBYSpiZK",
+    "display_name": "Nova Reyes",
+    "bio": "Architect of digital futures.",
+    "avatar_url": "https://images.unsplash.com/photo-1551678663-b18770239cf0?w=150&h=150&fit=crop&crop=face",
+    "followers": [
+      "68cd3e8d-98fc-4422-b879-f1ef90232eca",
+      "994ae822-9118-4b5c-b7b7-c85b784381dc"
+    ],
+    "following": [],
+    "created_at": "2026-04-06T15:53:08.654908+00:00"
+  }
+]
