@@ -351,37 +351,25 @@ ai_chat_sessions = {}
 
 @api_router.post("/ai/chat")
 async def ai_chat(data: AIChatInput, user=Depends(get_current_user)):
-    session_id = data.session_id or f"{user['id']}_default"
+    session_id = data.session_id or f"{user['_id']}_default"
     try:
-        from emergentintegrations.llm.chat import LlmChat, UserMessage
-        if session_id not in ai_chat_sessions:
-            chat = LlmChat(api_key=EMERGENT_KEY, session_id=session_id,
-                system_message="You are T.P AI, the intelligent assistant for Totally Private. You're helpful, witty, and privacy-conscious. Keep responses concise.")
-            chat.with_model("openai", "gpt-4o")
-            ai_chat_sessions[session_id] = chat
-        chat = ai_chat_sessions[session_id]
-        response = await chat.send_message(UserMessage(text=data.message))
-    except ImportError:
-        try:
-            from openai import AsyncOpenAI
-            client_ai = AsyncOpenAI(api_key=EMERGENT_KEY)
-            history = [m for m in load_collection("ai_messages") if m.get("session_id") == session_id]
-            messages = [{"role": "system", "content": "You are T.P AI, the intelligent assistant for Totally Private. You're helpful, witty, and privacy-conscious."}]
-            for m in history:
-                messages.append({"role": "user", "content": m["user_message"]})
-                messages.append({"role": "assistant", "content": m["ai_response"]})
-            messages.append({"role": "user", "content": data.message})
-            resp = await client_ai.chat.completions.create(model="gpt-4o", messages=messages)
-            response = resp.choices[0].message.content
-        except Exception as e:
-            logger.error(f"AI error: {e}")
-            raise HTTPException(500, f"AI service unavailable: {str(e)}")
+        client_ai = AsyncOpenAI(api_key=EMERGENT_KEY)
+        history = await db.ai_messages.find({"session_id": session_id, "user_id": user["_id"]}).sort("created_at", 1).to_list(50)
+        messages = [{"role": "system", "content": "You are T.P AI, the intelligent assistant for Totally Private - an end-to-end encrypted social media platform. You're helpful, witty, and privacy-conscious. Keep responses concise."}]
+        for m in history:
+            messages.append({"role": "user", "content": m["user_message"]})
+            messages.append({"role": "assistant", "content": m["ai_response"]})
+        messages.append({"role": "user", "content": data.message})
+        resp = await client_ai.chat.completions.create(model="gpt-4o", messages=messages)
+        response = resp.choices[0].message.content
     except Exception as e:
-        logger.error(f"AI error: {e}")
-        raise HTTPException(500, f"AI error: {str(e)}")
-    insert("ai_messages", {"session_id": session_id, "user_id": user["id"],
+        logger.error(f"AI chat error: {e}")
+        raise HTTPException(500, f"AI service error: {str(e)}")
+    await db.ai_messages.insert_one({
+        "session_id": session_id, "user_id": user["_id"],
         "user_message": data.message, "ai_response": response,
-        "created_at": datetime.now(timezone.utc).isoformat()})
+        "created_at": datetime.now(timezone.utc).isoformat()
+    })
     return {"response": response, "session_id": session_id}
 
 @api_router.get("/ai/history")
